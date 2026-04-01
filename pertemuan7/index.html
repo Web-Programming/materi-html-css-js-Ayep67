@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        //Output Console
+        console.log("Hallo JavaScript");
+        console.error("Ini pesan error");
+        console.table(["Apel","Jeruk"]);
+
+    </script>
+</head>
+<body>
+    <h1>Ini Element H1</h1>
+    <div id="demo">Ini Element Div</div>
+    <script>
+        //Output Document - Pop Up Window
+
+        //alert("Hallo JavaScript");
+        //var nama = prompt("Masukkan Nama Anda");
+        //console.log("Hallo, " + nama);
+        // var isJomblo = confirm("Apakah anda Jomblo, kalo ya, mau lanjut?");
+        // if(isJomblo){
+        //     console.log("Ciee Jomblo");
+        // }else{
+        //     console.log("Byee ....");
+        // }
+
+        //Output Document - DOM
+        document.write("<h2>Hallo ...</h2>");
+        document.getElementById("demo").innerHTML = "Nama Saya Rachmat";
+        document.getElementById("demo").innerHTML += "<br/>Saya Mahasiwa UMDP";
+
+        //Variabel
+        var nama = "Nur Rachmat"; //string
+        var npm = 222525250005; //number (int)
+        var isMale = true; //boolean
+        var hobi = ["Reading", "Writing", "Dancing"]; //array
+        var nilaiKuliah = {
+                "namaMk":"PAW 1", 
+                "nilaiHuruf" : "A", 
+                "nilaiAngka" : "90"
+            }; // object
+    </script>
+</body>
+</html>
