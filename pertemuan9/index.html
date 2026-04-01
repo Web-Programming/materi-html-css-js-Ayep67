@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <script>
+        //localStorage.setItem("name","Arief Gunawan"); //test comment
+        //document.getElementById("demo").innerHTML = localStorage.getItem("name");
+
+        //sessionStorage.setItem("name","Gunawan Arief"); //test comment
+        document.getElementById("demo").innerHTML = sessionStorage.getItem("name");
+
+        //lihat perbedaan cara kerja keduanya dengan memberi tanda kometar // pada set item
+        //dan membuka tutup browser
+
+        //cookie -- 
+        //document.cookie = "username=Arief Gunawan Cookie;";
+    </script>
+</body>
+</html>

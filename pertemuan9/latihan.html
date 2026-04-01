@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku Tamu Seminar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Daftar Tamu Seminar "Menjadi Petani Sukses"</h2>
+        <input type="text" id="guestInput" placeholder="Masukkan nama tamu...">
+        <button onclick="addGuest()">Tambah</button>
+        
+        <ul id="guestList"></ul>
+        
+        <hr>
+        <button style="background-color: #ff4d4d; color: white; border: none;" onclick="clearList()">
+            Hapus Semua Data
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
