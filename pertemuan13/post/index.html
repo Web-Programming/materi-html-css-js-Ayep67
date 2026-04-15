@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API - POST </title>
+</head>
+<body>
+    <button onclick="testGet()">Tes Get</button>
+    <button onclick="testPost()">Tes Post</button>
+    <script>
+        function testPost(){
+            fetch('https://jsonplaceholder.typicode.com/posts', 
+            {
+                method: 'POST',
+                body: JSON.stringify({
+                    title: 'Dies Natalis UMDP',
+                    body: 'Selamat Ulang Tahun Universitas Multi Data Palembang... Jaya.. Jaya.. Jaya...',
+                    userId: 1,
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            })
+            .then((response) => response.json())
+            .then((json) => console.log(json));
+        }
+
+        function testGet(){
+            fetch('https://jsonplaceholder.typicode.com/posts/1')
+            .then((response) => response.json())
+            .then((json) => console.log(json));
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+<body>
+    <h1>Data Mahasiswa IF</h1>
+    <button id="btn-load" onclick="loadDataMhs()">Load Data Mhs</button>
+    <div id="data-mhs"></div>
+
+    <script>
+        function loadDataMhs(){
+            document.getElementById('data-mhs').innerHTML = "Loading ...";
+            fetch('mahasiswa.json')
+                .then(response => response.json())
+                .then(data => {
+                    //tes output di console 
+                    console.table(data);
+                    setTimeout(() => {
+                        let output = '';
+                        data.forEach(mhs => {
+                            output += `
+                                <ul>
+                                    <li>NPM : ${mhs.npm}</li>
+                                    <li>Nama : ${mhs.nama}</li>
+                                    <li>IPK : ${mhs.ipk}</li>
+                                </ul>
+                                <hr>
+                            `;
+                        });
+                        document.getElementById('data-mhs').innerHTML = output;
+                    }, 5000); //5 detik
+                })
+                .catch(error => {
+                    console.error('Error:', error);document.getElementById('data-mhs').innerHTML = "Gagal mengambil data Mhs";
+                });
+        }
+    </script>
+</body>
+</html>
