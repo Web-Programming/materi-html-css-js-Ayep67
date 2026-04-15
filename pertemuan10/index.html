@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <!-- Internal JS-->
+    <script>
+        // Ini komentar
+        /*  Ini Juga
+            Komentar */
+
+        // Output : Console
+        console.log("Hallo JavaScript");
+        var nama = "Nur Rachmat"
+        console.log("Nama Saya " + nama);
+        console.error("Biasanya digunakan untuk menunjukkan status error");
+        console.debug("Ini pesan debug");
+        console.info("Pesan Info");
+        console.table(['apel','jeruk','pepaya']);
+
+        // Output : Pup Up
+        //alert("Hallo IF2B!!!!");
+
+        //jendela popup konfirmasi dialog
+        //var blended = confirm("Apakah anda setuju besok blended? Klik oke untuk Ya");
+        //console.info("Anda menjawab " + blended);
+
+        //jendela popup dengan teks box 
+        //var hobi = prompt("Tuliskan hobi anda (selain datang terlambat)");
+        //alert("Hobi Saya " + hobi);
+    </script>
+    <!-- External JS-->
+    <script src="myjs.js"></script>
+</head>
+<body>
+    <h1>Ini Adalah Website yang Menggunakan JavaScript</h1>
+    <div id="demo">....</div>
+    <!-- Internal JS-->
+    <script>
+     // Output Document
+     document.write("Hallo, nama saya " + nama);
+     document.write("<p>Saya mahasiswa <b>Informatika</b><p>");
+     
+     // DOM (document object model)
+     document.getElementById("demo").innerHTML = "<b>Selamat Datang di Kelas <i>IF2B</i><b>";
+    </script>
+
+    <hr/>
+    <p>Masukkan Nama Anda : </p>
+    <input type="text" id="txtnama"><button id="btnsimpan">Simpan</button>
+    <br/>
+    <div id="output"></div>
+    <script>
+        //ambil nilai/value element
+        var isiDemo = document.getElementById("demo").outerText;
+        console.log(isiDemo);
+        var isiTxtNama = document.getElementById("txtnama").value;
+        console.log(isiTxtNama);
+
+        //event listener : keyup
+        document.getElementById("txtnama").addEventListener("keyup", function(value){
+            console.log(value.key);
+        });
+
+        //event klik (mouse click)
+        document.getElementById("btnsimpan").addEventListener("click", function (params) {
+            var isiTxtNama = document.getElementById("txtnama").value;
+            document.getElementById("output").innerHTML = "<h4>Hallo "+isiTxtNama + ", Salam Kenal</h4";
+            //document.write("<h4>Hallo "+isiTxtNama + ", Salam Kenal</h4");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kalkulator Bangun Datar</title>
+</head>
+<body>
+
+  <h2>Kalkulator Bangun Datar</h2>
+
+  <label>Input 1:</label>
+  <input type="number" id="input1"><br><br>
+
+  <label>Input 2:</label>
+  <input type="number" id="input2"><br><br>
+
+  <!-- Tombol -->
+  <button onclick="hitungPersegi()">Luas Persegi</button>
+  <button onclick="hitungPersegiPanjang()">Luas Persegi Panjang</button>
+  <button onclick="hitungSegitiga()">Luas Segitiga</button>
+  <button onclick="hitungLingkaran()">Luas Lingkaran</button>
+
+  <p id="hasil">Hasil: </p>
+
+  <script>
+    function hitungPersegi() {
+      let s = document.getElementById("input1").value;
+      let hasil = s * s;
+      document.getElementById("hasil").innerText = "Hasil: " + hasil;
+    }
+
+    function hitungPersegiPanjang() {
+      let p = document.getElementById("input1").value;
+      let l = document.getElementById("input2").value;
+      let hasil = p * l;
+      document.getElementById("hasil").innerText = "Hasil: " + hasil;
+    }
+
+    function hitungSegitiga() {
+      let a = document.getElementById("input1").value;
+      let t = document.getElementById("input2").value;
+      let hasil = 0.5 * a * t;
+      document.getElementById("hasil").innerText = "Hasil: " + hasil;
+    }
+
+    function hitungLingkaran() {
+      let r = document.getElementById("input1").value;
+      let hasil = Math.PI * r * r;
+      document.getElementById("hasil").innerText = "Hasil: " + hasil;
+    }
+  </script>
+
+</body>
+</html>
